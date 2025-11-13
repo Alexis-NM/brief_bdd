@@ -1,0 +1,7 @@
+id;id_fantoir;numero;rep;nom_voie;code_postal;code_insee;nom_commune;code_insee_ancienne_commune;nom_ancienne_commune;x;y;lon;lat;type_position;alias;nom_ld;libelle_acheminement;nom_afnor;source_position;source_nom_voie;certification_commune;cad_parcelles
+01002_w4ld4h_00006;;6;;Place du Pese Lait;01640;01002;L'Abergement-de-Varey;;;887643.67;6547960.53;5.425179;46.005447;entrée;;;ABERGEMENT-DE-VAREY (L );PLACE DU PESE LAIT;commune;commune;1;01002000AE0005
+01002_6zbsct_01082;;1082;;Chemin de la Ferm de la Montagne;01640;01002;L'Abergement-de-Varey;;;888177.96;6546947.6;5.431677;45.996182;entrée;;;ABERGEMENT-DE-VAREY (L );CHEMIN DE LA FERM DE LA MONTAGNE;commune;commune;1;010020000B0888
+01002_6zbsct_01083;;1083;;Chemin de la Ferm de la Montagne;01640;01002;L'Abergement-de-Varey;;;888176.77;6546971.23;5.431671;45.996395;entrée;;;ABERGEMENT-DE-VAREY (L );CHEMIN DE LA FERM DE LA MONTAGNE;commune;commune;1;010020000B0888
+01002_0050_00038;01002_0050;38;;Boucle du Closet;01640;01002;L'Abergement-de-Varey;;;887846.02;6547875.98;5.427759;46.00463;entrée;;;ABERGEMENT-DE-VAREY (L );BOUCLE DU CLOSET;commune;commune;1;01002000AE0056
+01002_0050_00054;01002_0050;54;;Boucle du Closet;01640;01002;L'Abergement-de-Varey;;;887829.69;6547880.92;5.42755;46.004679;entrée;;;ABERGEMENT-DE-VAREY (L );BOUCLE DU CLOSET;commune;commune;1;01002000AE0050
+01002_0050_00056;01002_0050;56;;Boucle du Closet;01640;01002;L'Abergement-de-Varey;;;887828.88;6547874.45;5.427537;46.004621;entrée;;;ABERGEMENT-DE-VAREY (L );BOUCLE DU CLOSET;commune;commune;1;01002000AE0047

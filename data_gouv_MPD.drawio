@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="aY8GwhnOBOhcrR7Yr8qP">
+    <mxGraphModel dx="1562" dy="928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vUWuWWUJAktJStNDVCqR-1" value="ADRESSE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="220" width="200" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-2" value="&lt;b&gt;PK&lt;/b&gt; id VARCHAR(30)&lt;div&gt;numéro SMALLINT&lt;/div&gt;&lt;div&gt;rep VARCHAR(5)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;alias VARCHAR(50)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;x DOUBLE PRECISION&lt;/div&gt;&lt;div&gt;y DOUBLE PRECISION&lt;/div&gt;&lt;div&gt;lon DOUBLE PRECISION&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;lat DOUBLE PRECISION&lt;/span&gt;&lt;/div&gt;&lt;div&gt;cad_parcelles VARCHAR(255)&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b style=&quot;&quot;&gt;FK #code_insee&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;FK #id_fantoir&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;FK #id_position&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vUWuWWUJAktJStNDVCqR-1">
+          <mxGeometry y="23" width="200" height="217" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="vUWuWWUJAktJStNDVCqR-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-4" value="VOIE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="540" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-5" value="&lt;b&gt;PK&lt;/b&gt; id_fantoir VARCHAR(12)&lt;div&gt;nom_voie VARCHAR(150)&lt;/div&gt;&lt;div&gt;nom_afnor VARCHAR(150)&lt;/div&gt;&lt;div&gt;source_nom_voie VARCHAR(50)&lt;br&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b&gt;FK #code_insee&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vUWuWWUJAktJStNDVCqR-4">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-6" value="COMMUNE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="130" y="380" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-7" value="&lt;b&gt;PK&lt;/b&gt; code_insee CHAR(5)&lt;div&gt;nom_commune VARCHAR(100)&lt;/div&gt;&lt;div&gt;code_postal CHAR(5)&lt;/div&gt;&lt;div&gt;certification_commune BOOLEAN&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vUWuWWUJAktJStNDVCqR-6">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-8" value="ANCIENNE_COMMUNE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-9" value="&lt;b&gt;PK&lt;/b&gt; code_insee_ancienne_commune CHAR(5)&lt;div&gt;nom_ancienne_commune VARCHAR(100)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b&gt;FK #code_insee&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vUWuWWUJAktJStNDVCqR-8">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="vUWuWWUJAktJStNDVCqR-11" target="vUWuWWUJAktJStNDVCqR-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-11" value="POSITION" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="350" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-12" value="&lt;div&gt;&lt;b&gt;PK&lt;/b&gt; id_position BIGSERIAL&lt;/div&gt;type_position VARCHAR(50)&lt;div&gt;source_position VARCHAR(50)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vUWuWWUJAktJStNDVCqR-11">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-13" value="MPD : le Modèle Physique de Données" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="435" y="70" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="vUWuWWUJAktJStNDVCqR-6" target="vUWuWWUJAktJStNDVCqR-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.195;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="vUWuWWUJAktJStNDVCqR-7" target="vUWuWWUJAktJStNDVCqR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vUWuWWUJAktJStNDVCqR-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vUWuWWUJAktJStNDVCqR-7" target="vUWuWWUJAktJStNDVCqR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

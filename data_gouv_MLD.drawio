@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Page-1" id="Ty9dOlNWPVlR7usg5pqe">
+    <mxGraphModel dx="1406" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="huVKTSBx6aiZph_qUKjp-39" value="ADRESSE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="170" width="200" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-40" value="id&lt;div&gt;numéro&lt;/div&gt;&lt;div&gt;rep&lt;/div&gt;&lt;div&gt;alias&lt;/div&gt;&lt;div&gt;x&lt;/div&gt;&lt;div&gt;y&lt;/div&gt;&lt;div&gt;lon&lt;/div&gt;&lt;div&gt;lat&lt;/div&gt;&lt;div&gt;cad_parcelles&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b style=&quot;&quot;&gt;#code_insee&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;#id_fantoir&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;#id_position&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="huVKTSBx6aiZph_qUKjp-39" vertex="1">
+          <mxGeometry y="23" width="200" height="217" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="huVKTSBx6aiZph_qUKjp-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-42" value="VOIE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="490" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-43" value="id_fantoir&lt;div&gt;nom_voie&lt;/div&gt;&lt;div&gt;nom_afnor&lt;/div&gt;&lt;div&gt;source_nom_voie&lt;br&gt;&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b&gt;#code_insee&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="huVKTSBx6aiZph_qUKjp-42" vertex="1">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-45" value="COMMUNE" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="140" y="330" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-46" value="code_insee&lt;div&gt;nom_commune&lt;/div&gt;&lt;div&gt;code_postal&lt;/div&gt;&lt;div&gt;certification_commune&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="huVKTSBx6aiZph_qUKjp-45" vertex="1">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-47" value="ANCIENNE_COMMUNE" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="630" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-48" value="code_insee_ancienne_commune&lt;div&gt;nom_ancienne_commune&lt;br&gt;&lt;span style=&quot;color: rgb(255, 51, 51);&quot;&gt;&lt;b&gt;#code_insee&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="huVKTSBx6aiZph_qUKjp-47" vertex="1">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="huVKTSBx6aiZph_qUKjp-50" target="huVKTSBx6aiZph_qUKjp-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-50" value="POSITION" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="890" y="300" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-51" value="&lt;div&gt;id_position&lt;/div&gt;type_position&lt;div&gt;source_position&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="huVKTSBx6aiZph_qUKjp-50" vertex="1">
+          <mxGeometry y="23" width="200" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-74" value="MLD : le Modèle Logique de Données" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="435" y="20" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.12;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="huVKTSBx6aiZph_qUKjp-45" target="huVKTSBx6aiZph_qUKjp-40" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.195;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="huVKTSBx6aiZph_qUKjp-46" target="huVKTSBx6aiZph_qUKjp-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="huVKTSBx6aiZph_qUKjp-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="huVKTSBx6aiZph_qUKjp-46" target="huVKTSBx6aiZph_qUKjp-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
