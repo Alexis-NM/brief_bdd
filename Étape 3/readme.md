@@ -2,7 +2,7 @@
 
 ## 🔧 Création des tables issues du MPD
 
-Pour cette étape on execute ce script dans dBeaver sur la bdd créée préalablement :
+Pour cette étape on execute ce script dans DBeaver sur la bdd créée préalablement :
 
 ```
 create_tables.sql
@@ -37,7 +37,7 @@ Dans DBeaver j'effectue :
 
 J'obtiens les données non traitées dans la table raw :
 
-![Screenshot](../screenshots/screenshot-1.png)
+![Screenshot](../screenshots/screenshot-2.png)
 
 ---
 
