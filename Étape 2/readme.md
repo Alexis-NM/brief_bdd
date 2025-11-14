@@ -1,4 +1,4 @@
-# 2. Modélisation MERISE
+# 🏗️ 2. Modélisation MERISE
 
 ## Construire le MCD (identification des entités et relations)
 
