@@ -2,7 +2,7 @@
 
 ## Télécharger un fichier CSV départemental (ex. adresses-59.csv)
 
-Fichier téléchargé et présent dans `/raw_data/adresses-01.csv`
+Fichier téléchargé et présent dans `../data/adresses-01.csv`
 
 ## Explorer les colonnes, types de données, doublons, valeurs manquantes
 

@@ -29,7 +29,7 @@ Ce script ajoute également les contraintes d’intégrité des clés étrangèr
 
 Dans DBeaver j'effectue :
 
-1. Je selectionne `raw_test`
+1. Je selectionne `../data/raw_test.csv`
 2. Clic droit → **Import Data**
 3. J'importe le CSV de test
 4. Je définis `;` comme séparateur
@@ -38,6 +38,8 @@ Dans DBeaver j'effectue :
 J'obtiens les données non traitées dans la table raw :
 
 ![Screenshot](../screenshots/screenshot-2.png)
+
+Si l’on n’utilise pas DBeaver, il est également possible d’importer manuellement les données en exécutant le script `./sql/import_raw_test.sql` dans un terminal psql (connecté à la bdd). Cette version nécessite que le fichier soit accessible en indiquant son chemin absolu.
 
 ---
 
