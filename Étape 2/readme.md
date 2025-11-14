@@ -4,6 +4,10 @@
 
 ![MCD](./data_gouv_MCD.png)
 
+*Note : Lors de l’analyse finale du MCD, il est apparu que la relation directe Commune → Adresse pouvait être déduite indirectement via les voies, ce qui introduit une redondance dans le modèle. Un modèle normalisé pourrait supprimer cette relation.
+Ce choix n’a pas été effectué au départ pour une raison liée au contexte du projet : certaines adresses n’ont pas de voie (lieux-dits, écarts, adresses atypiques).
+Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterait une réécriture du MPD, des scripts SQL, du processus de transformation, des triggers, etc...*
+
 ## Formaliser les règles de gestion et le dictionnaire de données
 
 # 📕 Règles de gestion
