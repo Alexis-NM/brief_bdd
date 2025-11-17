@@ -1,6 +1,6 @@
 # 📘 3. Mise en place de la base
 
-## 🔧 Création des tables issues du MPD
+## Création des tables issues du MPD
 
 Pour cette étape on execute ce script dans DBeaver sur la bdd créée préalablement :
 
@@ -25,7 +25,7 @@ Ce script ajoute également les contraintes d’intégrité des clés étrangèr
 
 ---
 
-## 📥 Insérer un jeu d’échantillon issu du CSV pour les tests
+## Insérer un jeu d’échantillon issu du CSV pour les tests
 
 Dans DBeaver j'effectue :
 
@@ -43,7 +43,7 @@ Si l’on n’utilise pas DBeaver, il est également possible d’importer manue
 
 ---
 
-## 🔄 Transformation SQL → modèle normalisé
+## Transformation SQL → modèle normalisé
 
 Pour cette partie le script qui nous interesse est celui-ci :
 
@@ -70,11 +70,11 @@ Grâce à cela, le script peut être rejoué après chaque nouvel import CSV.
 
 ---
 
-## 🧪 Vérification de la cohérence et de la normalisation
+## Vérification de la cohérence et de la normalisation
 
 Une fois la transformation effectuée, on peut effectuer quelques contrôles pour valider la qualité du modèle et la bonne cohérence des données insérées dans les tables normalisées.
 
-Les requêtes disponible dans ce fichier, constituent un jeu de tests minimal et suffisant :
+Les requêtes disponible dans le fichier, constituent un jeu de tests minimal et suffisant :
 
 ```
 tests.sql
