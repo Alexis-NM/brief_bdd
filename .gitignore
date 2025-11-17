@@ -34,4 +34,13 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+
+# ===========================
+#  PostgreSQL data (Docker)
+# ===========================
+docker/postgres_data/
+postgres_data/
+data/postgres/
+
+
 # End of https://www.toptal.com/developers/gitignore/api/macos
