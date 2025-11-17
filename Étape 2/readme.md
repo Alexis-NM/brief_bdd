@@ -4,13 +4,15 @@
 
 ![MCD](./data_gouv_MCD.png)
 
-*Note : Lors de l’analyse finale du MCD, il est apparu que la relation directe Commune → Adresse pouvait être déduite indirectement via les voies, ce qui introduit une redondance dans le modèle. Un modèle normalisé pourrait supprimer cette relation.
+_Note : Lors de l’analyse finale du MCD, il est apparu que la relation directe Commune → Adresse pouvait être déduite indirectement via les voies, ce qui introduit une redondance dans le modèle. Un modèle normalisé pourrait supprimer cette relation.
 Ce choix n’a pas été effectué au départ pour une raison liée au contexte du projet : certaines adresses n’ont pas de voie (lieux-dits, écarts, adresses atypiques).
-Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterait une réécriture du MPD, des scripts SQL, du processus de transformation, des triggers, etc...*
+Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterait une réécriture du MPD, des scripts SQL, du processus de transformation, des triggers, etc..._
+
+---
 
 ## Formaliser les règles de gestion et le dictionnaire de données
 
-# 📕 Règles de gestion
+### 📕 Règles de gestion
 
 **RG1.** Chaque **commune** est identifiée par un **code INSEE** unique.
 
@@ -44,9 +46,9 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 
 ---
 
-# 📗 Dictionnaire de données
+### 📗 Dictionnaire de données
 
-## Table : COMMUNE
+#### Table : COMMUNE
 
 | Code                  | Libellé                                       | Type    | Taille | E/C | Règle de calcul | Règles / Contraintes  |
 | --------------------- | --------------------------------------------- | ------- | ------ | --- | --------------- | --------------------- |
@@ -55,7 +57,7 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 | code_postal           | Code postal                                   | CHAR    | 5      | E   | –               | Format `00000`        |
 | certification_commune | Indique si la commune a certifié ses adresses | BOOLEAN | –      | E   | –               | Valeurs {TRUE, FALSE} |
 
-## Table : VOIE
+#### Table : VOIE
 
 | Code            | Libellé                      | Type    | Taille | E/C | Règle de calcul | Règles / Contraintes      |
 | --------------- | ---------------------------- | ------- | ------ | --- | --------------- | ------------------------- |
@@ -64,7 +66,7 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 | nom_afnor       | Nom au format AFNOR          | VARCHAR | 150    | E   | –               | –                         |
 | source_nom_voie | Source du libellé de la voie | VARCHAR | 50     | E   | –               | –                         |
 
-## Table : POSITION
+#### Table : POSITION
 
 | Code            | Libellé                                          | Type      | Taille | E/C | Règle de calcul | Règles / Contraintes                             |
 | --------------- | ------------------------------------------------ | --------- | ------ | --- | --------------- | ------------------------------------------------ |
@@ -72,14 +74,14 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 | type_position   | Type de position (entrée, bâtiment, etc.)        | VARCHAR   | 50     | E   | –               | –                                                |
 | source_position | Origine de la position (BAN, commune, IGN, etc.) | VARCHAR   | 50     | E   | –               | Couple `(type_position, source_position)` unique |
 
-## Table : ANCIENNE_COMMUNE
+#### Table : ANCIENNE_COMMUNE
 
 | Code                        | Libellé                      | Type    | Taille | E/C | Règle de calcul | Règles / Contraintes |
 | --------------------------- | ---------------------------- | ------- | ------ | --- | --------------- | -------------------- |
 | code_insee_ancienne_commune | Ancien code INSEE            | CHAR    | 5      | E   | –               | Format `00000`       |
 | nom_ancienne_commune        | Nom historique de la commune | VARCHAR | 100    | E   | –               | –                    |
 
-## Table : ADRESSE
+#### Table : ADRESSE
 
 | Code          | Libellé                                      | Type             | Taille | E/C | Règle de calcul | Règles / Contraintes                        |
 | ------------- | -------------------------------------------- | ---------------- | ------ | :-: | --------------- | ------------------------------------------- |
@@ -93,15 +95,18 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 | lat           | Latitude géographique                        | DOUBLE PRECISION | –      |  E  | –               | WGS84 (EPSG:4326), valeur entre -90 et 90   |
 | cad_parcelles | Références cadastrales liées                 | VARCHAR          | 255    |  E  | –               | Valeur libre (séparateur)                   |
 
+---
+
 ## Préciser les contraintes (unicité, cardinalités, dépendances fonctionnelles)
 
-| Association                    | Lien                                                        | Cardinalités.          |
-|--------------------------------|-------------------------------------------------------------|------------------------|
-| **Commune – Adresse**          | Une commune possède plusieurs adresses                      | (1,n)                  |
-| **Voie – Adresse**             | Une voie contient plusieurs adresses                        | (1,n)                  |
-| **Adresse – Parcelle**         | Une adresse peut concerner plusieurs parcelles cadastrales  | (0,n)                  |
-| **Commune – Ancienne commune** | Une ancienne commune est devenue une commune actuelle       | (0,1)                  |
+| Association                    | Lien                                                       | Cardinalités. |
+| ------------------------------ | ---------------------------------------------------------- | ------------- |
+| **Commune – Adresse**          | Une commune possède plusieurs adresses                     | (1,n)         |
+| **Voie – Adresse**             | Une voie contient plusieurs adresses                       | (1,n)         |
+| **Adresse – Parcelle**         | Une adresse peut concerner plusieurs parcelles cadastrales | (0,n)         |
+| **Commune – Ancienne commune** | Une ancienne commune est devenue une commune actuelle      | (0,1)         |
 
+---
 
 ## Décliner ensuite le MLD et le MPD
 
@@ -109,7 +114,6 @@ Une version V2 pourrait adopter une normalisation plus stricte qui nécessiterai
 
 ![MLD](./data_gouv_MLD.png)
 
----
 ## MPD
 
 ![MPD](./data_gouv_MPD.png)

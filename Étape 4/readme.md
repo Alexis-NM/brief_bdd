@@ -97,6 +97,8 @@ WHERE
     AND TRIM(c.nom_commune) <> '';
 ```
 
+---
+
 ## 📋 4.2 Requêtes d’insertion / mise à jour / suppression
 
 #### Ajouter une nouvelle adresse complète dans les tables finales
@@ -158,6 +160,8 @@ WHERE numero IS NULL
    OR id_fantoir IS NULL;
 ```
 
+---
+
 ## 🛟 4.3 Détection de problèmes et qualité des données
 
 #### Identifier doublons exacts (mêmes numéro + nom de voie + code postal + commune)
@@ -215,6 +219,8 @@ GROUP BY c.code_postal, c.nom_commune
 HAVING COUNT(*) > 10000
 ORDER BY nb_adresses DESC;
 ```
+
+---
 
 ## 🧪 4.4 Requêtes d’agrégation et analyse
 
@@ -297,6 +303,8 @@ FROM adresse a
 LEFT JOIN voie v    ON a.id_fantoir = v.id_fantoir
 LEFT JOIN commune c ON a.code_insee = c.code_insee;
 ```
+
+---
 
 ## 📡 4.5 Requêtes avancées
 
